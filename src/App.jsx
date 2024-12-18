@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Home from './pages/Home'
-import Searchpandits from './pages/searchPandits';
+import Searchpandits from '../pages/Searchpandits';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from './components/Layout';
 import BookPandit from './pages/BookPandit';
