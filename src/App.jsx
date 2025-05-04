@@ -1,6 +1,6 @@
 import './App.css'
 import Home from './pages/Home'
-import SearchPandits from './pages/SearchPandits';
+import SearchPandits from './pages/Searchpandits';
 import Layout from './components/Layout';
 import BookPandit from './pages/BookPandit';
 import BookingConfirmation from './pages/BookingConfirmation';
