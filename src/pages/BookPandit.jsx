@@ -4,7 +4,7 @@ import { Calendar } from "@/components/ui/calendar"
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Star, MapPin, Info, CalendarIcon, Clock, CheckCircle, ChevronLeft, Languages } from "lucide-react";
+import { Star, CalendarIcon, Languages } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate, useParams } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
@@ -13,7 +13,6 @@ import { supabase } from "../../supabaseClient";
 
 export default function PanditBooking() {
   const {panditId} = useParams();
-  const [poojaTypes, setPoojaTypes] = useState([]);
   const [selectedPoojaType, setSelectedPoojaType] = useState("");
   const [panditDetails, setPanditDetails] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
@@ -31,17 +30,15 @@ export default function PanditBooking() {
   useEffect(() => {
     const fetchPanditDetails = async () => {
       try {
-        // Fetch details from Supabase
         const { data, error } = await supabase
           .from("pandits")
           .select("*")
           .eq("id", panditId)
-          .single(); // Fetch a single Pandit
+          .single(); 
   
         if (error) throw error;
   
-        // Fetch public URL for the profile picture if exists
-        let publicImageUrl = "/placeholder.svg"; // Default placeholder image
+        let publicImageUrl = "/placeholder.svg";
         if (data?.profile_pic) {
           const { data: publicUrlData, error: urlError } = supabase.storage
             .from("pandit_profile")
@@ -76,7 +73,7 @@ export default function PanditBooking() {
 
   async function handleBooking(panditId){
     try{
-      const { data, error } = await supabase.from("bookings")
+      const { error } = await supabase.from("bookings")
         .insert([{
           pandit_id: panditId,
           pooja_type: selectedPoojaType,

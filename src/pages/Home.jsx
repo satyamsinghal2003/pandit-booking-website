@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import { Phone, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Heart } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 
 
@@ -153,7 +151,7 @@ export default function Home() {
               </h3>
               <div className="space-y-2">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  <span className="font-semibold">All Occasions Covered:</span> Whether it's a wedding, housewarming, or daily puja, we offer a wide variety of rituals to cater to every spiritual need.
+                  <span className="font-semibold">All Occasions Covered:</span> Whether its a wedding, housewarming, or daily puja, we offer a wide variety of rituals to cater to every spiritual need.
                 </p>
               </div>
             </CardContent>
@@ -179,7 +177,7 @@ export default function Home() {
               </h3>
               <div className="space-y-2">
                 <p className="text-lg leading-relaxed text-gray-700">
-                  <span className="font-semibold">No Hidden Charges:</span> Transparent and affordable pricing for all services, so you always know what you're paying for.
+                  <span className="font-semibold">No Hidden Charges:</span> Transparent and affordable pricing for all services, so you always know what you are paying for.
                 </p>
               </div>
             </CardContent>

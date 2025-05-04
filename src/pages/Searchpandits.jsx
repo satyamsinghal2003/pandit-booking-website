@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -13,11 +13,11 @@ function SearchPandits() {
   const city = searchParams.get("city");
   const puja = searchParams.get("puja");
   const navigate = useNavigate();
-  const [pandits, setPandits] = useState([]); // All pandits fetched from the database
-  const [filteredPandits, setFilteredPandits] = useState([]); // Filtered pandits based on search
-  const [locationSearch, setLocationSearch] = useState(city); // User input for location search
-  const [poojaSearch, setPoojaSearch] = useState(puja); // User input for pooja type search
-  const [error, setError] = useState(null); // Error state
+  const [pandits, setPandits] = useState([]); 
+  const [filteredPandits, setFilteredPandits] = useState([]); 
+  const [locationSearch, setLocationSearch] = useState(city);
+  const [poojaSearch, setPoojaSearch] = useState(puja);
+  const [error, setError] = useState(null); 
   
 
 
