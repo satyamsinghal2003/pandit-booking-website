@@ -9,7 +9,7 @@ const founders = [
     name: "Palak Bansal",
     role: "CEO & Co-Founder",
     image: Palak,
-    bio: "Palak is a visionary entrepreneur with a deep passion for Indian rituals and technology. He leads the company with innovation and a focus on customer satisfaction.",
+    bio: "Palak is a visionary entrepreneur with a deep passion for Indian rituals and technology. She leads the company with innovation and a focus on customer satisfaction.",
   },
   {
     name: "Somya Tiwari",
